@@ -50,7 +50,7 @@ export function getAdalDefaultFields(): FormField[] {
       label: 'Kraj (Country)',
       page: 1,
       x: 15.0,
-      y: 28.8,
+      y: 26.8,
       width: 26.0,
       height: 2.6,
       placeholder: 'np. Polska / France',
