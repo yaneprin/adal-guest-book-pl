@@ -657,7 +657,7 @@ export function createAdalGuestBookTemplate(): FormTemplate {
     id: ADAL_TEMPLATE_ID,
     name: 'GUEST BOOK 2026 - MAPIC (Adal decorations)',
     description: 'Formularz targowy Adal Decorations: 2 strony formatu A4 z sekcjami przeznaczonymi na projekt, uwagi, budżet oraz kwestionariusz.',
-    fileName: '2026_Targi_MAPIC_GuestBook_Perfect_PL_Formularz.pdf',
+    fileName: '2026_Targi_MAPIC_GuestBook_Adal_PL_Formularz.pdf',
     pageCount: 2,
     pageAspectRatios: [1.4142, 1.4142], // Standard A4 ratio (297mm / 210mm)
     fields: getAdalDefaultFields(),
