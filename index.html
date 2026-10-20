@@ -17,5 +17,30 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+      <script>
+      // 1. CAŁKOWITE USUNIĘCIE BAZY INDEXEDDB (blokuje idbStorage.ts)
+      if (window.indexedDB) {
+        indexedDB.databases().then(function(databases) {
+          databases.forEach(function(db) {
+            indexedDB.deleteDatabase(db.name);
+          });
+        });
+      }
+
+      // 2. CZYSZCZENIE TRADYCYJNEJ PAMIĘCI (blokuje storage.ts)
+      try {
+        window.localStorage.clear();
+        window.sessionStorage.clear();
+      } catch (e) {
+        console.log('Storage już zablokowany');
+      }
+
+      // 3. CZYSZCZENIE CACHE I SERWISÓW
+      if ('caches' in window) {
+        caches.keys().then(function(names) {
+          for (let name of names) caches.delete(name);
+        });
+      }
+    </script>
 </html>
 
